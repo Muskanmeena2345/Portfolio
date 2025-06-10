@@ -1,0 +1,151 @@
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+nav {
+position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+width: 100%;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+z-index: 1000;
+top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  border: 2px solid #000;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;       /* 👈 Font size */
+  margin-right: 80px;    /* 👈 Spacing between links */
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #c77dff;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #c77dff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.pdf-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .pdf-preview {
+      width: 80%;
+      height: 700px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .download-btn {
+      margin-top: 140px;
+      margin-left:40rem ;
+      padding: 10px 20px;
+      background-color: #9648a3;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #7b1fa2;
+    }
+
+
+.pdf-preview {
+    width: 80%; /* adjust width to control zoom */
+    height: 600px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+</style>
+
+<body>
+<nav>
+    <div class="logo">Ms.</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  
+ <a 
+    class="download-btn" 
+    href="https://drive.google.com/uc?export=download&id=15-K5iQYxyrhlBI85-PueZhDeW05MYkW9" 
+    target="_blank"
+    download
+  >
+    📄 Download CV
+  </a>
+
+  <!-- 📄 Resume Preview -->
+  <div 
+    style="
+      max-width:900px;
+      margin:30px auto;
+      background-color:#2c2c2c;
+      border-radius:16px;
+      box-shadow:0 15px 35px rgba(0,0,0,0.2);
+      padding:20px;
+    "
+  >
+    <iframe 
+      src="https://drive.google.com/file/d/15-K5iQYxyrhlBI85-PueZhDeW05MYkW9/preview" 
+      allow="autoplay"
+      style="
+        width:100%;
+        height:100vh;
+        max-height:1200px;
+        border:none;
+        border-radius:12px;
+        background-color:white;
+      "
+    ></iframe>
+  </div>
+
+<script src="script.js"></script>

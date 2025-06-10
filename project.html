@@ -1,0 +1,240 @@
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #222;
+}
+nav {
+position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+width: 100%;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+z-index: 1000;
+top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  border: 2px solid #000;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;       /* 👈 Font size */
+  margin-right: 80px;    /* 👈 Spacing between links */
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #c77dff;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #c77dff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #000;
+}
+.section-title span {
+  color: #8000FF;
+}
+
+.section-subtitle {
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.project-card {
+align-items: center;
+margin-left: 100px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 15px rgba(128, 0, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+width: 320px;     /* You can change this value */
+  height: 300px; 
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(128, 0, 255, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin-top: 25px;
+  color: #333;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 0.95em;
+
+}
+
+.buttons {
+  margin-top: 15px;
+}
+.btn {
+  text-decoration: none;
+  background: #8000FF;
+  color: white;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #a259ff;
+}
+.foot{
+background-color: #c77dff;
+width: 100%;
+height: max-content;
+}
+footer{
+margin-top: 260px;
+background-color: #c084f5;
+}
+
+footer p{
+font-size: 20px;
+margin-top: 40px;
+margin-bottom: 50px;
+font-weight: bold;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+ margin-top: -90px;
+margin-left: 1200px;
+}
+
+.icons a {
+  display: inline-block;
+  /* background: #1f1f2e; */
+  padding: 12px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  background: #c084f5;
+  transform: scale(1.1);
+}
+
+.icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+</style>
+
+
+<body>
+<nav>
+<div class="logo">Ms.</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+  <section class="projects-section">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <p class="section-subtitle">Here are a few projects I’ve worked on recently.</p>
+
+    <div class="projects-grid">
+      <!-- Project Card -->
+      <div class="project-card">
+        <img src="https://img.freepik.com/free-vector/online-weather-forecast-smartphone-screen-isometric-composition-with-female-character-presenter-blue-background-3d-vector-illustration_1284-69840.jpg?ga=GA1.1.1769995753.1744551804&semt=ais_hybrid&w=740" alt="app ss">
+        <h3>SkySavy</h3>
+        <p>SkySavy is a sleek and user-friendly weather app that fetches real-time weather updates using a reliable Weather API.</p>
+        <div class="buttons">
+          <a href="https://github.com/Muskanmeena2345/Skysavy-nextjs-weather-app" class="btn">GitHub</a>
+          <a href="https://skysavy-app.vercel.app/" class="btn">Demo</a>
+        </div>
+      </div>
+
+      <!-- Repeat for other projects -->
+      <div class="project-card">
+        <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/The-Charity-Colorlib-Website-Template.jpg" alt="Bits-of-Code" width="100px" height="300px">
+        <h3>NGO website</h3>
+        <p>A modern, responsive, and visually appealing website built with Next.js to help Non-Governmental Organizations (NGOs) showcase their mission, projects, and impact. </p>
+        <div class="buttons">
+          <a href="https://github.com/Muskanmeena2345/NGO-web-NextJS" class="btn">GitHub</a>
+          <a href="https://internship-project-nextjs-89203.vercel.app/" class="btn">Demo</a>
+        </div>
+      </div>
+
+      <!-- You can duplicate project-card div for other projects -->
+    </div>
+ </section>
+   <div class="foot"> 
+  <footer>
+<hr>
+    <p>Designed and Developed by Muskan</p>
+    <div class="icons">
+      <a href="https://github.com/Muskanmeena2345"><img src="https://cdn-icons-png.freepik.com/256/2956/2956194.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="Git"></a>
+    <a href="https://www.linkedin.com/in/muskan-2345ms/"><img src="https://cdn-icons-png.freepik.com/256/254/254394.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming"></a>
+    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/2175/2175198.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="Instagram"></a>
+    </div>
+  </footer>
+   </div>
+ 
+</body>
+<script src="script.js"></script>

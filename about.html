@@ -1,0 +1,388 @@
+<link rel="stylesheet" href="style.css">
+<style>
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+nav {
+position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+width: 100%;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+z-index: 1000;
+top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  border: 2px solid #000;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;       /* 👈 Font size */
+  margin-right: 80px;    /* 👈 Spacing between links */
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #c77dff;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #c77dff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.text-section {
+  flex: 1;
+  max-width: 600px;
+position: absolute;
+margin-top: 200px;
+}
+
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.highlight {
+  color: #a969f7;
+margin-left: 300px;
+}
+
+.purple {
+  color: #c084fc;
+}
+
+p {
+  font-size: 1.5rem;
+margin-left: 200px;
+width: 100%;
+line-height: 1.1;
+margin-bottom: 0;
+}
+
+ul {
+  margin-top: 20px;
+  padding-left: 20px;
+  list-style: none;
+margin-left: 200px;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+blockquote {
+  margin-top: 40px;
+  font-size: 1.2rem;
+margin-left: 300px;
+  color: #6549b9;
+width: 100%;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 8px;
+margin-left: 100px;
+  font-size: 1rem;
+  color: #6549b9;
+}
+
+/* Image Section */
+.image-section img {
+  max-width: 100%;
+width: 400px;
+margin-top: 300px;
+margin-left:60em;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .text-section {
+    margin-bottom: 40px;
+  }
+}
+
+.skills-section {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 200px;
+  background-color: #fefeff;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  color: #6a0dad;
+  margin-bottom: 30px;
+}
+
+.pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background-color: #ffffff;
+  border: 2px solid #d0b3ff;
+  color: #6a0dad;
+  width: 250px;
+  height: 140px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(128, 0, 128, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 10px;
+  gap: 10px;
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(106, 13, 173, 0.3);
+}
+.tools-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+h2{
+color: #6a0dad;
+text-align: center;
+}
+.trool-card {
+  border: 2px solid #c084fc;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+width: 150px;
+height: 100px;
+}
+.trool-card img{
+width: 80px;
+height: 70px;
+margin-top: 20px;
+margin-left: 30px;
+}
+
+.trool-card:hover {
+  transform: scale(1.05);
+}
+
+.code-section {
+  margin-top: 3rem;
+}
+footer p{
+font-size: 20px;
+margin-top: 40px;
+margin-bottom: 50px;
+font-weight: bold;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+ margin-top: -90px;
+position: absolute;
+margin-left: 1200px;
+}
+
+.icons a {
+  display: inline-block;
+  /* background: #1f1f2e; */
+  padding: 12px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  background: #c084f5;
+  transform: scale(1.1);
+}
+
+.icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+</style>
+<nav>
+<div class="logo">Ms.</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+<section class="about">
+    <div class="text-section">
+      <h1><span class="highlight">Who I'M</span></h1>
+
+      <p>Hi Everyone, I am <span class="purple">Muskan</span> from <span class="purple">Delhi, India</span>.</p>
+      <p>I'm currently pursuing a BCA in Computer Science from Indira Gandhi National University.</p>
+<p>I'm also working on my DSA (Data Structures and Algorithms) and several projects to enhance my skills.</p>
+
+      <p>Apart from coding, some other activities that I love to do!</p>
+
+      <ul>
+        <li>🎮 Playing Games</li>
+        <li>📝 Writing Tech Blogs</li>
+        <li>✈️ Travelling</li>
+      </ul>
+
+      <blockquote>
+        "Focus on creating things that truly impact the world!"
+        <br><span class="quote-author">— Muskan</span>
+      </blockquote>
+    </div>
+
+    <div class="image-section">
+      <img src="https://img.freepik.com/free-vector/young-woman-uses-computer-work-reduce-infection_1150-34985.jpg?ga=GA1.1.1769995753.1744551804&w=740" alt="Developer Illustration">
+    </div>
+  </section>
+<div class="skills-section">
+  <h2>Professional Skillset</h2>
+  <div class="pyramid">
+    <div class="row">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/152/152760.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="Java">
+        <span>Java</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/5968/5968544.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/6132/6132222.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="C/C++">
+        <span>C/C++</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/18968/18968826.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="SQL">
+        <span>SQL</span>
+      </div>
+    </div>  
+    <div class="row">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/721/721671.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/17638/17638400.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="HTML/CSS">
+        <span>HTML/CSS</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/3393/3393920.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="React">
+        <span>React</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://nodejs.org/static/logos/nodejsDark.svg" alt="Node.js">
+        <span>Node.js</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/2956/2956194.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="Git">
+        <span>Git</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.freepik.com/256/5969/5969028.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="Docker">
+        <span>Docker</span>
+      </div>
+      <div class="skill-card">
+        <img src="https://img.icons8.com/?size=100&id=AqYCfGyGXlO7&format=png" alt="Flask">
+        <span>Flask</span>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="tools-section">
+    <h2><span>Tools</span> I use</h2>
+    <div class="tools-container">
+      <div class="trool-card" style="font-size: 40px;font-weight: bold;text-align: center;"><span style="margin-top: 20px; position: absolute;margin-left: -60px;">macOS</span></div>
+      <div class="trool-card"><img src="https://cdn-icons-png.flaticon.com/128/906/906324.png" alt="vs-code"></div>
+      <div class="trool-card"><img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/light/vercel.png" alt="vercel"></div>
+    </div>
+  </section>
+<hr>
+  <footer>
+    <p>Designed and Developed by Muskan</p>
+    <div class="icons">
+      <a href="https://github.com/Muskanmeena2345"><img src="https://cdn-icons-png.freepik.com/256/2956/2956194.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="Git"></a>
+    <a href="https://www.linkedin.com/in/muskan-2345ms/"><img src="https://cdn-icons-png.freepik.com/256/254/254394.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming"></a>
+    <a href="#"><img src="https://cdn-icons-png.freepik.com/256/2175/2175198.png?ga=GA1.1.1769995753.1744551804&semt=ais_incoming" alt="Instagram"></a>
+    </div>
+  </footer>
+<script src="script.js"></script>
